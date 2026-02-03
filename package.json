@@ -1,9 +1,12 @@
 {
-  "name": "pro-site",
+  "name": "frozen-tuna.github.io",
+  "homepage": "https://frozen-tuna.github.io",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "predeploy": "next build && echo > out/.nojekyll",
+    "deploy": "gh-pages -d out",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
@@ -20,6 +23,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
